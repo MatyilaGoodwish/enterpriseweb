@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Enterprise.Home" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Images/logo.jpg" rel="shortcut icon" type="image/*" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153107511-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-153107511-1');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.3.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.3.0/firebase-ui-auth.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script data-ad-client="ca-pub-5573581608002514" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCixmYny0mBqYSfjGiTLcS0CTyqTmMzOGI",
+            authDomain: "enterprisewebsites-e8954.firebaseapp.com",
+            databaseURL: "https://enterprisewebsites-e8954.firebaseio.com",
+            projectId: "enterprisewebsites-e8954",
+            storageBucket: "enterprisewebsites-e8954.appspot.com",
+            messagingSenderId: "616179719030",
+            appId: "1:616179719030:web:f41e7032570db86c62f857",
+            measurementId: "G-EBQ2316DQX"
+        };
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Content/Design.css" rel="stylesheet" />
+
+    <script async src='https://cse.google.com/cse.js?cx=partner-pub-5573581608002514:3257196845'></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="Images/logo.jpg" width="48" alt="Enterprise websites logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span><b>MENU</b>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto inner-main-menu">
+            </ul>
+        </div>
+    </nav>
+    <script type="text/x-handlebars" id="main-menu">
+        {{#each userMenu}}
+             <li class="nav-item">
+                 <a class="nav-link {{styles}}" href="{{url}}" runat="server">{{label}}</a>
+             </li>
+        {{/each}}
+    </script>
+    <video class="mobile-video" controls>
+        <source src="Images/Epic.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="container my-4">
+        </div>
+    </div>
+     <div class="container  my-5 text-center contact-section" id="contact-placeholder">
+     </div>
+    <script type="text/x-handlebars" id="contact-view">
+            <img src="Images/logo.jpg" alt="our brand" class="silos" />
+            <h3 class="display-3">Inquiries</h3>
+            <h4>For assistance with Inquiries/General Questions</h4>
+            <p>
+                Don't hesitate to contact us using the information below or via email we're always here to hear what you have in mind.
+        </p>
+            <div class="row text-center">
+                <div class="col-md-4 my-3">
+                    <h4>Working Hours</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Mon-Thurs (9AM - 10PM)</li>
+                        <li class="list-group-item">Saturdays (10AM - 7PM)</li>
+                        <li class="list-group-item">Public Holidays (Closed)</li>
+                        <li class="list-group-item">Tel: (087) 057-1581</li>
+                    </ul>
+                </div>
+                <div class="col-md-4  my-3">
+                    <h4>Contacts</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="mailto:hr@enterprisewebsites.co.za">Careers/HR</a></li>
+                        <li class="list-group-item"><a href="mailto:developer.lead@enterprisewebsites.co.za">API Developers</a></li>
+                        <li class="list-group-item"><a href="mailto:media@enterprisewebsites.co.za">Media Directors</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4  my-3">
+                    <h4>Additional Information</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="privacy.aspx">Privacy Policy</a></li>
+
+                        <li class="list-group-item"><a href="small-business-website.aspx">Buy Services</a></li>
+                        <li class="list-group-item"><a href="website-pricing.aspx">Latest Pricing</a></li>
+                        <li class="list-group-item">
+                            <div class="gcse-searchbox-only"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </script>
+    <footer class="bg-dark mt-5">
+        <div class="text-center footer p-3 text-white">
+            <small>2019 &copy; Enterprise Websites - All rights reserved. | <a href="~/privacy.aspx" runat="server">Privacy Policy</a>
+            </small>
+        </div>
+    </footer>
+
+    <script src="App/main.js"></script>
+    <!-- Twitter universal website tag code -->
+    <script>
+        !function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'o2twn');
+        twq('track', 'PageView');
+    </script>
+
+
+    <noscript>
+        <div style="display: none;">
+            <img src="//pixel.quantserve.com/pixel/p-egScLuDe6_dbB.gif" border="0" height="1" width="1" alt="Quantcast" />
+        </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+    <!-- End Twitter universal website tag code -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+   
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿User-agent: * 
+Crawl-delay: 10
+#Directories
+Disallow: /Articles
+Disallow: /Content
+Disallow: /Process
+Disallow: /Members
+Disallow: /Layouts
+Disallow: /Images
