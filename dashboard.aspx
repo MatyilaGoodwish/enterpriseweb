@@ -94,7 +94,7 @@
                 if (user) {
                     var menuHtmlCompiled = menuSource({
                         "profile": {
-                            "status": "Contacting referrences"
+                            "status": "Contacting references"
                         },
 						"props": {
 							
