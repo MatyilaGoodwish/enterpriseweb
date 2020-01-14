@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Careers dashboard for applications" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="Enterprise.dashboard" %>
+﻿<%@ Page Title="Careers dashboard for members of enterprise websites" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="Enterprise.dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta name="description" content="Dashboard, Career center for Registered applicants" />
@@ -94,7 +94,7 @@
                 if (user) {
                     var menuHtmlCompiled = menuSource({
                         "profile": {
-                            "status": "Selection In Progress"
+                            "status": "Contacting referrences"
                         },
 						"props": {
 							
