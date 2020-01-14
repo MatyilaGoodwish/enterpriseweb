@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="Becoming part of the global hire solution" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="step-2.aspx.cs" Inherits="Enterprise.step_2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta name="description" content="Global hire solution is sponsoring many graduates with Job Placements"/>
-
     <script>
         const fb = firebase
-
         fb.auth().onAuthStateChanged(checkUserState.bind(this))
 
         function checkUserState(user) {
@@ -14,9 +12,6 @@
                 location.replace('step-3.aspx')
             }
         }
-
-      
-        
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

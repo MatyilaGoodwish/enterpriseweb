@@ -15,8 +15,7 @@
         </div>
         <div class="row">
                <iframe width="100%" height="350"  class="border rounded shadow-lg" src="https://www.youtube.com/embed/nUsaztzPD4k?rel=0&version=3&autoplay=0&controls=1&&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-            
+       
         </div>
         <div class="container">
             <div class="row">
